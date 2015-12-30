@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>router</title>
+</head>
+<body>
+	<a href="#www">testActions</a>
+</body>
+<script src="../static/lib/jquery-1.11.3.min.js"></script>
+<script src="../static/lib/underscore-1.8.2.min.js"></script>
+<script src="../static/lib/backbone-1.1.2.min.js"></script>
+<script>
+
+	var AppRouter = Backbone.Router.extend({
+		routes: {
+			"*actions": "defaultRouter"
+		},
+
+		defaultRouter: function(actions) {
+			alert(actions) //www
+		}
+	});
+
+	var app_router = new AppRouter;
+
+	Backbone.history.start();
+
+</script>
+</html>
